@@ -3,7 +3,8 @@ package com.example.graphql.resource;
 import javax.servlet.annotation.WebServlet;
 
 import com.coxautodev.graphql.tools.SchemaParser;
-import com.example.graphql.query.Query;
+import com.example.graphql.query.LinkMutation;
+import com.example.graphql.query.LinkQuery;
 import com.example.graphql.repo.LinkRepo;
 
 import graphql.schema.GraphQLSchema;
@@ -27,8 +28,8 @@ public class GraphqlResource extends SimpleGraphQLServlet {
 
 	private static GraphQLSchema buildQuerySchema() {
 		final LinkRepo linkRepo = new LinkRepo();
-		return SchemaParser.newParser().file(SCHEMA_GRAPHQL_FILE).resolvers(new Query(linkRepo)).build()
-				.makeExecutableSchema();
+		return SchemaParser.newParser().file(SCHEMA_GRAPHQL_FILE)
+				.resolvers(new LinkQuery(linkRepo), new LinkMutation(linkRepo)).build().makeExecutableSchema();
 
 	}
 

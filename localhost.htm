@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- saved from url=(0292)http://localhost:8080/?query=mutation%20%7B%0A%20%20createLink(url%3A%20%22http%3Atest.com%22%2C%20description%3A%20%22test%22)%20%7B%0A%20%20%20%20url%0A%20%20%20%20description%0A%20%20%7D%0A%7D%0A%0A%7B%0A%20%20allLinks%20%7B%0A%20%20%20%20url%0A%20%20%20%20description%0A%20%20%7D%0A%7D%0A -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <style>
+    body {
+      height: 100%;
+      margin: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #graphiql {
+      height: 100vh;
+    }
+  </style>
+
+  <!--
+      This GraphiQL example depends on Promise and fetch, which are available in
+      modern browsers, but can be "polyfilled" for older browsers.
+      GraphiQL itself depends on React DOM.
+      If you do not want to rely on a CDN, you can host these files locally or
+      include them directly in your favored resource bunder.
+    -->
+  <script src="./localhost_files/es6-promise.auto.min.js"></script>
+  <script src="./localhost_files/fetch.min.js"></script>
+  <script src="./localhost_files/react.min.js"></script>
+  <script src="./localhost_files/react-dom.min.js"></script>
+
+  <!--
+      These two files can be found in the npm module, however you may wish to
+      copy them directly into your environment, or perhaps include them in your
+      favored resource bundler.
+     -->
+
+  <link rel="stylesheet" href="./localhost_files/graphiql.css">
+  <script src="./localhost_files/graphiql.js"></script>
+</head>
+
+<body>
+  <div id="graphiql"><div data-reactroot="" class="graphiql-container"><div class="historyPaneWrap" style="display: none; width: 230px; z-index: 7;"><div><div class="history-title-bar"><div class="history-title">History</div><div class="doc-explorer-rhs"><div class="docExplorerHide">&#10005;</div></div></div><div class="history-contents"><p><span>mutation {  createLink(url: "http:test.com", description: "test") {    url    description  }}{  allLinks {    url    description  }}</span><span style="float: right; visibility: hidden;">&#9734;</span></p><p><span>{  allLinks {    url    description  }}</span><span style="float: right; visibility: hidden;">&#9734;</span></p><p><span>{  allLinks {    url  }}</span><span style="float: right; visibility: hidden;">&#9734;</span></p></div></div></div><div class="editorWrap"><div class="topBarWrap"><div class="topBar"><div class="title"><span><!-- react-text: 20 -->Graph<!-- /react-text --><em>i</em><!-- react-text: 22 -->QL<!-- /react-text --></span></div><div class="execute-button-wrap"><button type="button" class="execute-button" title="Execute Query (Ctrl-Enter)"><svg width="34" height="34"><path d="M 11 9 L 24 16 L 11 23 z"></path></svg></button></div><div class="toolbar"><a class="toolbar-button" title="Prettify Query">Prettify</a><a class="toolbar-button" title="Show History">History</a></div></div><button class="docExplorerShow">Docs</button></div><div class="editorBar"><div class="queryWrap" style="flex: 1 1 0%;"><div class="query-editor"><div class="CodeMirror cm-s-graphiql"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 20px; left: 43px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 39px; margin-bottom: 0px; border-right-width: 30px; min-height: 278px; min-width: 451.578px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre>x</pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>9</div></div><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>10</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div><div class="CodeMirror-gutter-elt" style="left: 29px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">mutation</span><span class="cm-ws"> </span><span class="cm-punctuation">{</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws">  </span><span class="cm-property">createLink</span><span class="cm-punctuation">(</span><span class="cm-attribute">url</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-string">"http:test.com"</span><span class="cm-ws">, </span><span class="cm-attribute">description</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-string">"test"</span><span class="cm-punctuation">)</span><span class="cm-ws"> </span><span class="cm-punctuation">{</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws">    </span><span class="cm-property">url</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws">    </span><span class="cm-property">description</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws">  </span><span class="cm-punctuation">}</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-punctuation">}</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div><div class="CodeMirror-gutter-elt" style="left: 29px; width: 9px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-punctuation">{</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws">  </span><span class="cm-property">allLinks</span><span class="cm-ws"> </span><span class="cm-punctuation">{</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws">    </span><span class="cm-property">url</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws">    </span><span class="cm-property">description</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws">  </span><span class="cm-punctuation">}</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-punctuation">}</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 278px;"></div><div class="CodeMirror-gutters" style="height: 308px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="variable-editor"><div class="variable-editor-title" style="cursor: n-resize;">Query Variables</div><div class="codemirrorWrap"><div class="CodeMirror cm-s-graphiql"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 43px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 0px; width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 57px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 39px; margin-bottom: 0px; border-right-width: 30px; min-height: 57px; min-width: 7px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -39px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">&#8203;</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 57px;"></div><div class="CodeMirror-gutters" style="height: 87px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div></div></div><div class="resultWrap"><div class="result-window"><div class="CodeMirror cm-s-graphiql CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 20px; left: 17px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 13px; margin-bottom: 0px; border-right-width: 30px; min-height: 329px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -13px;"><div class="CodeMirror-gutter-elt" style="left: 0px; width: 12px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-punctuation">{</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp;</span><span class="cm-def">"data"</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-keyword">null</span><span class="cm-punctuation">,</span></span></pre><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -13px;"><div class="CodeMirror-gutter-elt" style="left: 0px; width: 12px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp;</span><span class="cm-def">"errors"</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-punctuation">[</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -13px;"><div class="CodeMirror-gutter-elt" style="left: 0px; width: 12px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp;</span><span class="cm-punctuation">{</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp;</span><span class="cm-property">"validationErrorType"</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-string">"LoneAnonymousOperationViolation"</span><span class="cm-punctuation">,</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp;</span><span class="cm-property">"message"</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-string">"Validation error of type LoneAnonymousOperationViolation: Anonymous operation with other operations."</span><span class="cm-punctuation">,</span></span></pre><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -13px;"><div class="CodeMirror-gutter-elt" style="left: 0px; width: 12px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp;</span><span class="cm-property">"locations"</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-punctuation">[</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="cm-punctuation">{</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="cm-property">"line"</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-number">8</span><span class="cm-punctuation">,</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="cm-property">"column"</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp; &nbsp;</span><span class="cm-punctuation">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp;</span><span class="cm-punctuation">],</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp; &nbsp;</span><span class="cm-property">"errorType"</span><span class="cm-punctuation">:</span><span class="cm-ws"> </span><span class="cm-string">"ValidationError"</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp; &nbsp;</span><span class="cm-punctuation">}</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-ws"> &nbsp;</span><span class="cm-punctuation">]</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-punctuation">}</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 329px;"></div><div class="CodeMirror-gutters" style="height: 359px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div></div></div></div><div class="docExplorerWrap" style="display: none; width: 350px;"><div class="docExplorerResizer"></div><div class="doc-explorer"><div class="doc-explorer-title-bar"><div class="doc-explorer-back">LinkMutation</div><div class="doc-explorer-title">createLink</div><div class="doc-explorer-rhs"><div class="docExplorerHide">&#10005;</div></div></div><div class="doc-explorer-contents"><div><div class="doc-type-description"><p>No Description</p>
+</div><div class="doc-category"><div class="doc-category-title">type</div><a class="type-name">Link</a></div><div class="doc-category"><div class="doc-category-title">arguments</div><div class="doc-category-item"><div><span class="arg"><span class="arg-name">url</span><!-- react-text: 181 -->: <!-- /react-text --><span><a class="type-name">String</a><!-- react-text: 184 -->!<!-- /react-text --></span></span></div><div></div></div><div class="doc-category-item"><div><span class="arg"><span class="arg-name">description</span><!-- react-text: 190 -->: <!-- /react-text --><span><a class="type-name">String</a><!-- react-text: 193 -->!<!-- /react-text --></span></span></div><div></div></div></div></div></div></div></div></div></div>
+  <script>
+    /**
+     * This GraphiQL example illustrates how to use some of GraphiQL's props
+     * in order to enable reading and updating the URL parameters, making
+     * link sharing of queries a little bit easier.
+     *
+     * This is only one example of this kind of feature, GraphiQL exposes
+     * various React params to enable interesting integrations.
+     */
+
+    // Parse the search string to get url parameters.
+    var search = window.location.search;
+    var parameters = {};
+    search
+      .substr(1)
+      .split("&")
+      .forEach(function (entry) {
+        var eq = entry.indexOf("=");
+        if (eq >= 0) {
+          parameters[
+            decodeURIComponent(entry.slice(0, eq))
+          ] = decodeURIComponent(entry.slice(eq + 1));
+        }
+      });
+
+    // if variables was provided, try to format it.
+    if (parameters.variables) {
+      try {
+        parameters.variables = JSON.stringify(
+          JSON.parse(parameters.variables),
+          null,
+          2
+        );
+      } catch (e) {
+        // Do nothing, we want to display the invalid JSON as a string, rather
+        // than present an error.
+      }
+    }
+
+    // When the query and variables string is edited, update the URL bar so
+    // that it can be easily shared
+    function onEditQuery(newQuery) {
+      parameters.query = newQuery;
+      updateURL();
+    }
+
+    function onEditVariables(newVariables) {
+      parameters.variables = newVariables;
+      updateURL();
+    }
+
+    function onEditOperationName(newOperationName) {
+      parameters.operationName = newOperationName;
+      updateURL();
+    }
+
+    function updateURL() {
+      var newSearch =
+        "?" +
+        Object.keys(parameters)
+          .filter(function (key) {
+            return Boolean(parameters[key]);
+          })
+          .map(function (key) {
+            return (
+              encodeURIComponent(key) +
+              "=" +
+              encodeURIComponent(parameters[key])
+            );
+          })
+          .join("&");
+      history.replaceState(null, null, newSearch);
+    }
+
+    // Defines a GraphQL fetcher using the fetch API. You're not required to
+    // use fetch, and could instead implement graphQLFetcher however you like,
+    // as long as it returns a Promise or Observable.
+    function graphQLFetcher(graphQLParams) {
+      // This example expects a GraphQL server at the path /graphql.
+      // Change this to point wherever you host your GraphQL server.
+      return fetch("/graphql", {
+        method: "post",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(graphQLParams),
+        credentials: "include"
+      })
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (responseBody) {
+          try {
+            return JSON.parse(responseBody);
+          } catch (error) {
+            return responseBody;
+          }
+        });
+    }
+
+    // Render <GraphiQL /> into the body.
+    // See the README in the top level of this module to learn more about
+    // how you can customize GraphiQL by providing different values or
+    // additional child elements.
+    ReactDOM.render(
+      React.createElement(GraphiQL, {
+        fetcher: graphQLFetcher,
+        query: parameters.query,
+        variables: parameters.variables,
+        operationName: parameters.operationName,
+        onEditQuery: onEditQuery,
+        onEditVariables: onEditVariables,
+        onEditOperationName: onEditOperationName
+      }),
+      document.getElementById("graphiql")
+    );
+  </script>
+
+
+</body></html>

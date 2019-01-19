@@ -3,10 +3,17 @@ type Link {
   description: String!
 }
 
-type Query {
+type LinkQuery {
   allLinks: [Link]
 }
 
-schema {
-  query: Query
+type LinkMutation {
+  createLink(url: String!, description: String!): Link
 }
+
+schema {
+  query: LinkQuery
+  mutation: LinkMutation
+}
+
+

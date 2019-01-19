@@ -15,11 +15,11 @@ import lombok.Getter;
  *
  */
 @Getter
-public class Query implements GraphQLRootResolver {
+public class LinkQuery implements GraphQLRootResolver {
 
 	private final LinkRepo linkRepo;
 
-	public Query(LinkRepo linkRepo) {
+	public LinkQuery(LinkRepo linkRepo) {
 		super();
 		this.linkRepo = linkRepo;
 	}
